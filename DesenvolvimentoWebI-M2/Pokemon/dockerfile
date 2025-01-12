@@ -1,0 +1,10 @@
+FROM node:latest
+ENV NODE_ENV=production
+WORKDIR /app
+COPY . .
+RUN npm cache clean --force
+RUN npm install
+RUN chown -R node /app
+EXPOSE 8080
+USER node
+CMD ["npm", "start"]

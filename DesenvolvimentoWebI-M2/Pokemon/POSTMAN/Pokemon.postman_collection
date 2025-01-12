@@ -1,0 +1,1957 @@
+{
+	"info": {
+		"_postman_id": "f13553ac-6c75-4549-9948-77004831c5bb",
+		"name": "Pokemon",
+		"description": "Uma api para Coleção de Pokemons \n\nContact Support:\n Name: Rafael Oliveira e Guilherme Almeida\n Email: a042611@umaia.pt e a040435@umaia.pt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38820958",
+		"_collection_link": "https://orange-rocket-54344.postman.co/workspace/2120a22c-d7ef-4971-85ca-de6615414ce1/collection/38820958-f13553ac-6c75-4549-9948-77004831c5bb?action=share&source=collection_link&creator=38820958"
+	},
+	"item": [
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "{id_team}",
+					"item": [
+						{
+							"name": "Retrieve Team by ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Teams/:id_team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Teams",
+										":id_team"
+									],
+									"variable": [
+										{
+											"key": "id_team",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8080//Teams/:id_team",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"",
+												"Teams",
+												":id_team"
+											],
+											"variable": [
+												{
+													"key": "id_team"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id_team\": \"<long>\",\n  \"nome\": \"<string>\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Teams/:id_team",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Teams",
+												":id_team"
+											],
+											"variable": [
+												{
+													"key": "id_team"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Teams/:id_team",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Teams",
+												":id_team"
+											],
+											"variable": [
+												{
+													"key": "id_team"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update Team",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id_team\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Teams/:id_team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Teams",
+										":id_team"
+									],
+									"variable": [
+										{
+											"key": "id_team",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_team\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080//Teams/:id_team",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"",
+												"Teams",
+												":id_team"
+											],
+											"variable": [
+												{
+													"key": "id_team"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"description\": \"Team PUT success\",\n  \"x-content-type\": \"application/json\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_team\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Teams/:id_team",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Teams",
+												":id_team"
+											],
+											"variable": [
+												{
+													"key": "id_team"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_team\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Teams/:id_team",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Teams",
+												":id_team"
+											],
+											"variable": [
+												{
+													"key": "id_team"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Team",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Teams/:id_team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Teams",
+										":id_team"
+									],
+									"variable": [
+										{
+											"key": "id_team",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080//Teams/:id_team",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"",
+												"Teams",
+												":id_team"
+											],
+											"variable": [
+												{
+													"key": "id_team"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieve Team",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "{{baseUrl}}/Teams"
+					},
+					"response": [
+						{
+							"name": "Array of Team model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "http://localhost:8080//Teams"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id_team\": \"<long>\",\n    \"nome\": \"<string>\"\n  },\n  {\n    \"id_team\": \"<long>\",\n    \"nome\": \"<string>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Team",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id_team\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/Teams"
+					},
+					"response": [
+						{
+							"name": "Create Team model instances",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id_team\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080//Teams"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id_team\": \"<long>\",\n  \"nome\": \"<string>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Trainer",
+			"item": [
+				{
+					"name": "{id_trainer}",
+					"item": [
+						{
+							"name": "Retrieve Trainer by ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Trainer/:id_trainer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Trainer",
+										":id_trainer"
+									],
+									"variable": [
+										{
+											"key": "id_trainer",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8080//Trainer/:id_trainer",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"",
+												"Trainer",
+												":id_trainer"
+											],
+											"variable": [
+												{
+													"key": "id_trainer"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id_trainer\": \"<long>\",\n  \"nome\": \"<string>\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Trainer/:id_trainer",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Trainer",
+												":id_trainer"
+											],
+											"variable": [
+												{
+													"key": "id_trainer"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Trainer/:id_trainer",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Trainer",
+												":id_trainer"
+											],
+											"variable": [
+												{
+													"key": "id_trainer"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update Trainer",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id_trainer\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Trainer/:id_trainer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Trainer",
+										":id_trainer"
+									],
+									"variable": [
+										{
+											"key": "id_trainer",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_trainer\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080//Trainer/:id_trainer",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"",
+												"Trainer",
+												":id_trainer"
+											],
+											"variable": [
+												{
+													"key": "id_trainer"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"description\": \"Trainer PUT success\",\n  \"x-content-type\": \"application/json\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_trainer\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Trainer/:id_trainer",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Trainer",
+												":id_trainer"
+											],
+											"variable": [
+												{
+													"key": "id_trainer"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_trainer\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Trainer/:id_trainer",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Trainer",
+												":id_trainer"
+											],
+											"variable": [
+												{
+													"key": "id_trainer"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Trainer",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Trainer/:id_trainer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Trainer",
+										":id_trainer"
+									],
+									"variable": [
+										{
+											"key": "id_trainer",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080//Trainer/:id_trainer",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"",
+												"Trainer",
+												":id_trainer"
+											],
+											"variable": [
+												{
+													"key": "id_trainer"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieve Trainer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "{{baseUrl}}/Trainer"
+					},
+					"response": [
+						{
+							"name": "Array of Trainer model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "http://localhost:8080//Trainer"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id_trainer\": \"<long>\",\n    \"nome\": \"<string>\"\n  },\n  {\n    \"id_trainer\": \"<long>\",\n    \"nome\": \"<string>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Trainer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id_trainer\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/Trainer"
+					},
+					"response": [
+						{
+							"name": "Create Trainer model instances",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id_trainer\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/Trainer"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id_trainer\": \"<long>\",\n  \"nome\": \"<string>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Pokemon",
+			"item": [
+				{
+					"name": "{id_pokemon}",
+					"item": [
+						{
+							"name": "Retrieve Pokemon by ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Pokemon/:id_pokemon",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Pokemon",
+										":id_pokemon"
+									],
+									"variable": [
+										{
+											"key": "id_pokemon",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/Pokemon/:id_pokemon",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Pokemon",
+												":id_pokemon"
+											],
+											"variable": [
+												{
+													"key": "id_pokemon"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id_pokemon\": \"<long>\",\n  \"nome\": \"<string>\",\n  \"tipo1\": \"<string>\",\n  \"tipo2\": \"<string>\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Pokemon/:id_pokemon",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Pokemon",
+												":id_pokemon"
+											],
+											"variable": [
+												{
+													"key": "id_pokemon"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Pokemon/:id_pokemon",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Pokemon",
+												":id_pokemon"
+											],
+											"variable": [
+												{
+													"key": "id_pokemon"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update Pokemon",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id_pokemon\": \"<long>\",\n  \"nome\": \"<string>\",\n  \"tipo1\": \"<string>\",\n  \"tipo2\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Pokemon/:id_pokemon",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Pokemon",
+										":id_pokemon"
+									],
+									"variable": [
+										{
+											"key": "id_pokemon",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_pokemon\": \"<long>\",\n  \"nome\": \"<string>\",\n  \"tipo1\": \"<string>\",\n  \"tipo2\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Pokemon/:id_pokemon",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Pokemon",
+												":id_pokemon"
+											],
+											"variable": [
+												{
+													"key": "id_pokemon"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"description\": \"Pokemon PUT success\",\n  \"x-content-type\": \"application/json\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_pokemon\": \"<long>\",\n  \"nome\": \"<string>\",\n  \"tipo1\": \"<string>\",\n  \"tipo2\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Pokemon/:id_pokemon",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Pokemon",
+												":id_pokemon"
+											],
+											"variable": [
+												{
+													"key": "id_pokemon"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_pokemon\": \"<long>\",\n  \"nome\": \"<string>\",\n  \"tipo1\": \"<string>\",\n  \"tipo2\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Pokemon/:id_pokemon",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Pokemon",
+												":id_pokemon"
+											],
+											"variable": [
+												{
+													"key": "id_pokemon"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Pokemon",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Pokemon/:id_pokemon",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Pokemon",
+										":id_pokemon"
+									],
+									"variable": [
+										{
+											"key": "id_pokemon",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/Pokemon/:id_pokemon",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Pokemon",
+												":id_pokemon"
+											],
+											"variable": [
+												{
+													"key": "id_pokemon"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieve Pokemon",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "{{baseUrl}}/Pokemon"
+					},
+					"response": [
+						{
+							"name": "Array of Pokemon model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/Pokemon"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id_pokemon\": \"<long>\",\n    \"nome\": \"<string>\",\n    \"tipo1\": \"<string>\",\n    \"tipo2\": \"<string>\"\n  },\n  {\n    \"id_pokemon\": \"<long>\",\n    \"nome\": \"<string>\",\n    \"tipo1\": \"<string>\",\n    \"tipo2\": \"<string>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Pokemon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id_pokemon\": \"<long>\",\n  \"nome\": \"<string>\",\n  \"tipo1\": \"<string>\",\n  \"tipo2\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/Pokemon"
+					},
+					"response": [
+						{
+							"name": "Create Pokemon model instances",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id_pokemon\": \"<long>\",\n  \"nome\": \"<string>\",\n  \"tipo1\": \"<string>\",\n  \"tipo2\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/Pokemon"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id_pokemon\": \"<long>\",\n  \"nome\": \"<string>\",\n  \"tipo1\": \"<string>\",\n  \"tipo2\": \"<string>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tipo",
+			"item": [
+				{
+					"name": "Retrieve Tipo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "{{baseUrl}}/Tipo"
+					},
+					"response": [
+						{
+							"name": "Array of Tipo model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/Tipo"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id_type\": \"<long>\",\n    \"nome\": \"<string>\"\n  },\n  {\n    \"id_type\": \"<long>\",\n    \"nome\": \"<string>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Tipo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id_type\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/Tipo"
+					},
+					"response": [
+						{
+							"name": "Create Tipo model instances",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id_type\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/Tipo"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id_type\": \"<long>\",\n  \"nome\": \"<string>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "tipo",
+			"item": [
+				{
+					"name": "{id_tipo}",
+					"item": [
+						{
+							"name": "Retrieve Tipo by ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/tipo/:id_tipo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tipo",
+										":id_tipo"
+									],
+									"variable": [
+										{
+											"key": "id_tipo",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/tipo/:id_tipo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"tipo",
+												":id_tipo"
+											],
+											"variable": [
+												{
+													"key": "id_tipo"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id_type\": \"<long>\",\n  \"nome\": \"<string>\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/tipo/:id_tipo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"tipo",
+												":id_tipo"
+											],
+											"variable": [
+												{
+													"key": "id_tipo"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/tipo/:id_tipo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"tipo",
+												":id_tipo"
+											],
+											"variable": [
+												{
+													"key": "id_tipo"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update Tipo",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id_type\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/tipo/:id_tipo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tipo",
+										":id_tipo"
+									],
+									"variable": [
+										{
+											"key": "id_tipo",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_type\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/tipo/:id_tipo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"tipo",
+												":id_tipo"
+											],
+											"variable": [
+												{
+													"key": "id_tipo"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"description\": \"Tipo PUT success\",\n  \"x-content-type\": \"application/json\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_type\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/tipo/:id_tipo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"tipo",
+												":id_tipo"
+											],
+											"variable": [
+												{
+													"key": "id_tipo"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "id not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_type\": \"<long>\",\n  \"nome\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/tipo/:id_tipo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"tipo",
+												":id_tipo"
+											],
+											"variable": [
+												{
+													"key": "id_tipo"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Tipo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/tipo/:id_tipo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tipo",
+										":id_tipo"
+									],
+									"variable": [
+										{
+											"key": "id_tipo",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/tipo/:id_tipo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"tipo",
+												":id_tipo"
+											],
+											"variable": [
+												{
+													"key": "id_tipo"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "basePath",
+			"value": "/"
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080/"
+		}
+	]
+}
